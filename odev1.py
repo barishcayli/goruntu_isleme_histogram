@@ -4,21 +4,21 @@ import matplotlib.pyplot as plt
 
 resim = cv2.imread("resim.jpg",0)
 
-def calculate_histogram(image):
+def hesaplama(image):
     histogram = np.zeros((256,), dtype=int)
     yukseklik, genislik = image.shape
 
     
     for i in range(yukseklik):
         for j in range(genislik):
-            pixel_value = image[i, j]
-            histogram[pixel_value] += 1
+            degisken = image[i, j]
+            histogram[degisken] += 1
 
     return histogram
 
 
 
-histogram = calculate_histogram(resim)
+histogram = hesaplama(resim)
 
 plt.plot(histogram)
 plt.title('Gri Resim Histogramı')

@@ -7,8 +7,6 @@ goruntu = cv2.imread('resim.jpg')
 # Görüntüyü gri seviyeye dönüştür
 gri_ton = cv2.cvtColor(goruntu, cv2.COLOR_BGR2GRAY)
 
-# Gürültüyü azaltmak için Gauss filtresi uygula
-
 
 # Görüntüyü eşikle (threshholding)
 a, esik = cv2.threshold(gri_ton, 50, 255, cv2.THRESH_BINARY)
